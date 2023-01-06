@@ -1,0 +1,693 @@
+{
+	"info": {
+		"_postman_id": "dc477e79-ee23-4765-b5b1-0c7049db39db",
+		"name": "hithaui.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Xác thực",
+			"item": [
+				{
+					"name": "Đăng nhập",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student_code\": \"2019607088\",\r\n    \"password\": \"124616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/login/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quên mật khẩu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"student_code\": \"2019607088\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/forget-password",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Đặt lại mật khẩu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"124616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/reset-password/80cbf046b06868176c4abbd8209b97",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"reset-password",
+								"80cbf046b06868176c4abbd8209b97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Kiểm tra mã bí mật",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/verify-token/123456",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"verify-token",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Làm mới mã bí mật",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZGYxMTJmNTQ0MmM3ZDUwZTIyNjM0OCIsImlhdCI6MTYyNTQ3NzE1NiwiZXhwIjoxNjI2MzQxMTU2fQ.2SYOpC44Lk94b_pQQrBPHUrJQGfoGmWzhZiboSLEyc0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/token",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Cập nhật thông tin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"Nguyễn Bá Đông\",\r\n    \"address\": \"Hà Nội\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/profile",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy thông tin profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/auth/profile/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Thêm kỹ năng",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"skill\": \"NodeJs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/profile/skill",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"profile",
+								"skill"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa kỹ năng",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/profile/skill/123456",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"profile",
+								"skill",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Đổi mật khẩu",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"123456\",\r\n    \"new_password\": \"123\",\r\n    \"confirm_password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/profile/change-password",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"profile",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tài liệu",
+			"item": [
+				{
+					"name": "Upload tài liệu",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "document",
+									"type": "file",
+									"src": "/C:/Users/ADMIN/Downloads/0a4dcb92fa2d3c601b58d72720d6bec4.jpg"
+								},
+								{
+									"key": "subject_id",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Bài tập lớn csdl",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "document",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/documents",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"documents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách tài liệu upload bở thành viên",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/document/me",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"document",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa tài liệu",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/documents/61475e53dbe6982a5c9c5b8d",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"documents",
+								"61475e53dbe6982a5c9c5b8d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy chi tiết tài liệu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/documents/614406415ff7984bc8a70915",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"documents",
+								"614406415ff7984bc8a70915"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy tài liệu",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/documents?name=kĩ&type=document&subject=60e9c6d4d444ec5f44911574",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"documents"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "kĩ"
+								},
+								{
+									"key": "type",
+									"value": "document"
+								},
+								{
+									"key": "subject",
+									"value": "60e9c6d4d444ec5f44911574"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Active tài liệu",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/documents/61475b1e1fa73a2c10b26061",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"documents",
+								"61475b1e1fa73a2c10b26061"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Đề thi",
+			"item": [
+				{
+					"name": "Upload đề thi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "exam_file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "subject_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/exam",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lấy danh sách đề thi upload bởi thành viên",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/exam/me",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"exam",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Xóa đề thi",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api_url}}/exam/123456",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"exam",
+								"123456"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tìm kiếm đề thi",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Quản lý nhà hàng\",\r\n    \"subject_id\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/exam/search",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"exam",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Môn học",
+			"item": [
+				{
+					"name": "Lấy danh sách môn học",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "auth_token",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kỹ thuật lập\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/subject/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"subject",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

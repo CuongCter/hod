@@ -1,0 +1,201 @@
+[{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911577"
+  },
+  "name": "Nguyên lý hệ điều hành"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491156f"
+  },
+  "name": "Nhập môn về kỹ thuật (CNTT)"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911574"
+  },
+  "name": "Cấu trúc dữ liệu và giải thuật"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911573"
+  },
+  "name": "Thiết kế Web"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911576"
+  },
+  "name": "Lập trình hướng đối tượng"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911575"
+  },
+  "name": "Hệ quản trị cơ sở dữ liệu"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911578"
+  },
+  "name": "Nhập môn Công nghệ phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911571"
+  },
+  "name": "Kiến trúc máy tính"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911570"
+  },
+  "name": "Cơ sở dữ liệu"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911572"
+  },
+  "name": "Kỹ thuật lập trình"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491157a"
+  },
+  "name": "Mạng máy tính"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911579"
+  },
+  "name": "Thực tập cơ sở ngành"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491157b"
+  },
+  "name": "Phân tích và đặc tả yêu cầu phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491157c"
+  },
+  "name": "Trí tuệ nhân tạo"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491157f"
+  },
+  "name": "Quản lý dự án công nghệ thông tin"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911581"
+  },
+  "name": "Đồ họa máy tính"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911580"
+  },
+  "name": "Cơ sở lập trình nhúng"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491157e"
+  },
+  "name": "Thiết kế phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491157d"
+  },
+  "name": "An toàn và bảo mật thông tin"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911582"
+  },
+  "name": "Thiết kế giao diện người dùng"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911583"
+  },
+  "name": "Công cụ phát triển phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911584"
+  },
+  "name": "Ứng dụng thuật toán"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911586"
+  },
+  "name": "Phương pháp số trong lập trình"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911585"
+  },
+  "name": "Kỹ thuật số"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491158a"
+  },
+  "name": "Thực tâp chuyên ngành Kỹ thuật phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911587"
+  },
+  "name": "Lập trình .NET"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911589"
+  },
+  "name": "Lập trình Java"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491158b"
+  },
+  "name": "Đảm bảo chất lượng phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491158c"
+  },
+  "name": "Một số công nghệ phát triển phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911588"
+  },
+  "name": "Kiểm thử phần mềm"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911593"
+  },
+  "name": "Phát triển ứng dụng Game"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911591"
+  },
+  "name": "Lập trình web bằng PHP"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491158e"
+  },
+  "name": "Công nghệ thực tại ảo"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491158f"
+  },
+  "name": "Lập trình Java nâng cao"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f4491158d"
+  },
+  "name": "Công nghệ đa phương tiện"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911590"
+  },
+  "name": "Lập trình Web bằng ASP.NET"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911592"
+  },
+  "name": "Phần mềm mã nguồn mở"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911596"
+  },
+  "name": "Đồ án tốt nghiệp (Kỹ thuật phần mềm)"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911594"
+  },
+  "name": "Phát triển ứng dụng trên thiết bị di động"
+},{
+  "_id": {
+    "$oid": "60e9c6d4d444ec5f44911595"
+  },
+  "name": "Tích hợp hệ thống phần mềm"
+}]

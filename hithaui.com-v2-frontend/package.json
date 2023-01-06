@@ -1,0 +1,96 @@
+{
+  "name": "react-material-dashboard",
+  "author": "DeviasIO",
+  "licence": "MIT",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "start": "react-app-rewired start",
+    "start:local": "cross-env REACT_APP_BASE_URL=https://api.hithaui.com/api yarn start",
+    "build": "react-app-rewired build",
+    "build:staging": "cross-env REACT_APP_BASE_URL=https://api.hithaui.com/api CI=false react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.4.4",
+    "@mui/material": "^5.2.8",
+    "@mui/styles": "^5.4.1",
+    "axios": "^0.21.1",
+    "chart.js": "^2.9.4",
+    "clsx": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.10.7",
+    "eslint-config-prettier": "^8.3.0",
+    "formik": "^2.1.5",
+    "fuse.js": "^6.4.6",
+    "history": "^5.0.0",
+    "install": "^0.13.0",
+    "js-file-download": "^0.4.12",
+    "lodash": "^4.17.19",
+    "moment": "^2.29.1",
+    "npm": "^7.7.4",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-app-rewired": "^2.2.1",
+    "react-chartjs-2": "^2.10.0",
+    "react-dom": "^17.0.2",
+    "react-error-overlay": "6.0.9",
+    "react-feather": "^2.0.8",
+    "react-helmet": "^6.1.0",
+    "react-loader-spinner": "^4.0.0",
+    "react-moment": "^1.1.1",
+    "react-paginate": "^7.1.3",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-promise-tracker": "^2.1.0",
+    "react-redux": "^7.2.4",
+    "react-router": "^6.0.0-beta.0",
+    "react-router-dom": "^6.0.0-beta.0",
+    "react-scripts": "^4.0.0",
+    "react-scroll": "^1.8.6",
+    "react-select": "^4.3.1",
+    "react-select-async-paginate": "^0.6.0",
+    "react-select-search": "^3.0.8",
+    "react-smooth-scrolling": "^1.0.2",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.49.9",
+    "swiper": "4.5.0",
+    "uuid": "^8.3.0",
+    "yup": "^0.29.3"
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "node-sass": "4.14.1",
+    "prettier": "^2.3.2"
+  }
+}
